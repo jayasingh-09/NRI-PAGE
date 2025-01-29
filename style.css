@@ -1,0 +1,134 @@
+.hero-banner {
+    position: relative;
+    height: 600px; /* Adjust for full-screen look */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    max-width: 80%;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 400px;
+    }
+    
+    .hero-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+/* .investment-benefits {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    list-style-type: disc;     
+    padding-left: 20px;
+} */
+/* 
+ul.investment-benefits li {
+  margin-bottom: 10px; 
+} */
+.offer-card {
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}  
+/* Section Background */
+.real-estate-section {
+    background-color: #FBF6F2; /* Soft Off-White */
+}
+
+/* Left Content Section */
+.content-section {
+    background-color: #F9F4F1; /* Soft Beige */
+}
+
+
+/* Vertical Divider Line */
+.vertical-line {
+    width: 2px;
+    height: 50px;
+    background-color: #333;
+}
+
+/* Description */
+.description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* CTA Button */
+.cta-button {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #333;
+    padding: 8px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Right Image */
+.image-section {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+          
+.red-bg { background-color: #c8102e; } /* Red */
+.dark-red-bg { background-color: #a10f25; } /* Dark Red */
+.orange-bg { background-color: #d35400; } /* Orange */
+.light-orange-bg { background-color: #f39c12; } /* Light Orange */
+.yellow-bg { background-color: #f1c40f; } /* Yellow */
+
+.offer-card h2 { font-size: 2.5rem; font-weight: bold; }
+.offer-card h3 { font-size: 1.5rem; font-weight: bold; }
+.offer-card p { font-size: 1rem; }
+.read-more { color: #f39c12; font-weight: bold; text-decoration: none; }
+.read-more:hover { text-decoration: underline; }
