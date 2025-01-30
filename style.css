@@ -25,7 +25,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     border-radius: 10px;
     animation: fadeIn 2s ease-in-out;
@@ -97,21 +97,6 @@ ul.investment-benefits li {
     font-weight: 300;
     line-height: 1.6;
     color: #333;
-}
-
-/* CTA Button */
-.cta-button {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    border: 1px solid #333;
-    padding: 8px 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-    background-color: #333;
-    color: #fff;
 }
 
 /* Right Image */
