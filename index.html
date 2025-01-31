@@ -241,14 +241,14 @@
         <section class="container mt-5">
             <div class="row g-4 mt-3">
                 <div class="col-md-4">
-                    <div class="offer-card  position-relative p-4 border" style="color: black;">
+                    <div class=" p-4 text-dark rounded h-100 d-flex flex-column position-relative  border" style="color: black;">
                         <h3 class="fw-bold fs-3 "> What we offer</h3>
                         <p >Ashiana Housing<br>you are in safe hands</p>
                         <!-- Image positioned in the bottom-right, visible only on large screens -->
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="offer-card red-bg position-relative p-4">
+                    <div class="p-4 text-white rounded h-100 d-flex flex-column position-relative red-bg ">
                         <h2 class="fw-bold fs-3 " > Ease of buying</h2>
                         <p >Your voyage begins<br> with a click of a mouse.</p>
 
@@ -259,7 +259,7 @@
                     </div>
                 </div>
                 <div class="col-md-4" >
-                    <div class="offer-card yellow-bg position-relative p-4">
+                    <div class="yellow-bg p-4 text-white rounded h-100 d-flex flex-column position-relative">
                         <h2 class="fw-bold fs-3 " >Ease of resale and rental</h2>
                         <p>We understand the challenges<br> of distance and visit schedules.</p>
                         <div class="position-absolute bottom-0 end-0 p-2 d-none d-lg-block opacity-25">
@@ -269,10 +269,9 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="offer-card dark-red-bg position-relative p-4 text-white rounded">
+                    <div class=" dark-red-bg p-4 text-white rounded h-100 d-flex flex-column position-relative">
                         <h2 class="fw-bold fs-3 ">Ease of Payment</h2>
-                        <p class="lead fst-italic text-light">We offer two easy options<br> so that you can pay at easily.</p>
-                        
+                        <p class="lead fst-italic text-light">We offer two easy options<br> so that you can pay at easily.</p>                        
                         <!-- Decorative Image (Visible on Large Screens Only) -->
                         <div class="position-absolute bottom-0 end-0 p-2 d-none d-lg-block opacity-25">
                             <img src="Assets/img/Asset 15.png" alt="Decorative" class="img-fluid" style="max-width: 100px;">
@@ -495,53 +494,58 @@
         </section>
         <!-- Modal for Stories -->
         <section class="modal fade" id="storyModal" tabindex="-1" aria-labelledby="storyModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content ">
-                    <div class="modal-header border-0">
-                        <h5 class="modal-title fw-bold " id="storyModalLabel"></h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <!-- Progress Bar at the Top -->
-                        <div id="progressBarContainer" 
-                            class="position-absolute top-0 start-0 w-100 d-flex gap-1"
-                            style="height: 5px; z-index: 1055;">
-                        </div>
-                        <!-- Sound & Close Buttons in the Top-Right -->
-                        <div class="position-absolute top-0 end-0 d-flex gap-2 p-5" style="z-index: 1055;">
-                            <button id="toggleSound" class="btn btn-outline-dark p-1">
-                                <i class="bi bi-volume-up"></i> 
-                            </button>
-                            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <!-- Modal Body -->
-                        <div class="modal-body p-0 d-flex flex-column justify-content-center align-items-center position-relative" style="height: calc(100vh - 45px);">
-                            
-                            <!-- Story Image (Full-Screen Inside the Modal) -->
-                            <div class="d-flex justify-content-center align-items-center position-relative" style="height: 100vh; width: 100%;">
-                                <img id="storyImage" class="img-fluid rounded shadow-lg w-100" 
-                                    style="max-height: 100%; object-fit: cover;">
-                            </div>
-
-                            <!-- Story Description (Bottom Overlay) -->
-                            <div class="text-center position-absolute bottom-0 w-100 bg-white bg-opacity-50 py-2">
-                                <p id="storyDescription" class="fw-light text-dark mb-1"></p>
-                                <button  class="fw-light text-danger mb-0">Explore More</button>
-                            </div>
-
-                            <!-- Left Navigation Button -->
-                            <button id="prevStory" class="btn btn-light position-absolute start-0 top-50 translate-middle-y ms-2">
-                                <i class="bi bi-chevron-left"></i>
-                            </button>
-
-                            <!-- Right Navigation Button -->
-                            <button id="nextStory" class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2">
-                                <i class="bi bi-chevron-right"></i>
-                            </button>                    
-                    <!-- Navigation Buttons -->                    
-                </div>
+    <div class="modal-dialog modal-dialog-centered position-relative">
+        
+        <!-- Progress Bar (Outside .modal-content) -->
+        <div id="progressBarContainer" class="position-absolute top-0 start-0 w-100 d-flex gap-1" 
+             style="height: 4px; z-index: 50;">
+        </div>
+        <!-- Sound & Close Buttons in the Top-Right -->
+        <div class="position-absolute top-0 end-0 d-flex gap-2 p-5" style="z-index: 1055;">
+                <button id="toggleSound" class="btn btn-outline-dark p-1">
+                    <i class="bi bi-volume-up"></i> 
+                </button>
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </section>     
+
+        <div class="modal-content p-0">
+            <div class="modal-header border-0 m-0 p-0">
+                <h5 class="modal-title fw-bold " id="storyModalLabel"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>        
+            
+
+            <!-- Modal Body -->
+            <div class="modal-body p-0 d-flex flex-column justify-content-center align-items-center position-relative" style="height:60vh">
+                
+                <!-- Story Image (Full-Screen Inside the Modal) -->
+                <div class="d-flex justify-content-center align-items-center position-relative" style="height: 80vh; width: 100%;">
+                    <img id="storyImage" class="img-fluid rounded shadow-lg w-100" 
+                        style="max-height: 100%; object-fit: cover;">
+                </div>
+
+                <!-- Story Description (Bottom Overlay) -->
+                <div class="text-center  bottom-0 w-100 bg-white  ">
+                    <p id="storyDescription" class="fw-light text-dark mb-3"></p>
+                    <button class="text-center px-4 py-2 position-relative border-3 border-danger rounded-pill bg-danger text-white fw-bold shadow-sm mb-3">
+                        Explore More
+                    </button>
+                </div>
+
+                <!-- Left Navigation Button -->
+                <button id="prevStory" class="btn btn-light position-absolute start-0 top-50 translate-middle-y ms-2">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <!-- Right Navigation Button -->
+                <button id="nextStory" class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2">
+                    <i class="bi bi-chevron-right"></i>
+                </button>                    
+            </div>
+        </div>
+    </div>
+</section>
+
         <section class="container mt-5">
             <div class="container">
                 <div class="row align-items-center">

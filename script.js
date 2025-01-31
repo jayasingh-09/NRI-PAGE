@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         progressBarContainer.innerHTML = "";
         stories.forEach(() => {
             let bar = document.createElement("div");
-            bar.className = "progress-bar bg-secondary flex-fill mx-1";
-            bar.style.height = "5px";
+            bar.className = "progress-bar bg-secondary flex-fill ";
+            bar.style.height = "2px";
             let activeBar = document.createElement("div");
             activeBar.className = "progress-bar-fill bg-danger";
             activeBar.style.width = "0%";
@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 3000);
         }
     }
-
     storyCards.forEach(card => {
         card.addEventListener("click", function () {
             let title = this.getAttribute("data-title");
@@ -75,19 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 100);
         });
     });
-
     nextButton.addEventListener("click", function () {
         if (currentStoryIndex < stories.length - 1) {
             showStory(currentStoryIndex + 1);
         }
     });
-
     prevButton.addEventListener("click", function () {
         if (currentStoryIndex > 0) {
             showStory(currentStoryIndex - 1);
         }
     });
-
     document.getElementById("storyModal").addEventListener("hidden.bs.modal", function () {
         clearTimeout(autoPlayTimeout);
     });
@@ -95,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const soundButton = document.getElementById("toggleSound");
     let soundOn = true; // Default state: Sound is ON
-
     soundButton.addEventListener("click", function () {
     soundOn = !soundOn; // Toggle sound state
     soundButton.innerHTML = soundOn
@@ -105,50 +100,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Here you can control actual sound logic (e.g., mute/unmute video/audio)
     console.log("Sound:", soundOn ? "ON" : "OFF");
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  let storyCards = document.querySelectorAll(".story-card");
-  let storyModal = new bootstrap.Modal(document.getElementById("storyModal"));
-  let storyTitle = document.getElementById("storyModalLabel");
-  let storyImage = document.getElementById("storyImage");
-  let storyDescription = document.getElementById("storyDescription");
-  let progressBarContainer = document.getElementById("progressBarContainer");
-  let prevButton = document.getElementById("prevStory");
-  let nextButton = document.getElementById("nextStory");
-  let toggleSoundButton = document.getElementById("toggleSound");
-
-  let stories = [];
-  let currentStoryIndex = 0;
-  let isMuted = false;
-
-  toggleSoundButton.addEventListener("click", function () {
-    isMuted = !isMuted;
-    toggleSoundButton.innerHTML = isMuted
-      ? '<i class="bi bi-volume-mute"></i>'
-      : '<i class="bi bi-volume-up"></i>';
-  });
-
-  function showStory(index) {
-    if (index >= 0 && index < stories.length) {
-      currentStoryIndex = index;
-      storyImage.src = stories[currentStoryIndex].img;
-      storyDescription.textContent = stories[currentStoryIndex].desc;
-    }
-  }
-
-  storyCards.forEach((card) => {
-    card.addEventListener("click", function () {
-      stories = JSON.parse(this.getAttribute("data-content"));
-      storyTitle.innerText = this.getAttribute("data-title");
-      showStory(0);
-    });
-  });
-
-  prevButton.addEventListener("click", function () {
-    if (currentStoryIndex > 0) showStory(currentStoryIndex - 1);
-  });
-  nextButton.addEventListener("click", function () {
-    if (currentStoryIndex < stories.length - 1)
-      showStory(currentStoryIndex + 1);
-  });
 });
