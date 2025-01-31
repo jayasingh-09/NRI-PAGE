@@ -95,8 +95,9 @@ ul.investment-benefits li {
 .description {
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.6;
-    color: #333;
+    text-align:justify;
+    
+    
 }
 
 /* Right Image */
@@ -104,6 +105,41 @@ ul.investment-benefits li {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+.story-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar on IE */
+}
+
+    .story-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar on Webkit (Chrome, Safari) */
+    }
+
+    .story-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 300px; /* Set card width */
+        margin-right: 10px; /* Space between cards */
+    }
+
+    .card-img-top {
+        height: 70%; /* 70% Image */
+        object-fit: cover;
+    }
+
+    .card-body {
+        height: 30%; /* 30% Text */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+.nav-link {
+    font-size: 1.2rem; /* Adjust as necessary for the desired size */
 }
           
 .red-bg { background-color: #c8102e; } /* Red */
@@ -117,3 +153,4 @@ ul.investment-benefits li {
 .offer-card p { font-size: 1rem; }
 .read-more { color: #f39c12; font-weight: bold; text-decoration: none; }
 .read-more:hover { text-decoration: underline; }
+        
