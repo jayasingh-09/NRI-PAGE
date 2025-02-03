@@ -62,33 +62,15 @@
     flex-direction: column;
     justify-content: space-between;
 }  
-.real-estate-section {
-    background-color: #FBF6F2; 
-}
-
-/* Left Content Section */
-.content-section {
-    background-color: #F9F4F1; /* Soft Beige */
-}
-
-
-/* Vertical Divider Line */
 .vertical-line {
     width: 2px;
     height: 50px;
     background-color: #333;
 }
-
-/* Description */
 .description {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 20px;    
     text-align:justify;
-    
-    
 }
-
-/* Right Image */
 .image-section {
     width: 100%;
     height: auto;
@@ -115,12 +97,12 @@ margin-right: 10px; /* Space between cards */
 }
 
 .card-img-top {
-height: 70%; /* 70% Image */
+height: 90%; /* 70% Image */
 object-fit: cover;
 }
 
 .card-body {
-height: 30%; /* 30% Text */
+height: 10%; /* 30% Text */
 display: flex;
 align-items: center;
 justify-content: center;
