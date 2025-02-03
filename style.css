@@ -1,6 +1,6 @@
 .hero-banner {
     position: relative;
-    height: 600px; 
+    height: 680px; 
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
 .vertical-line {
     width: 2px;
     height: 50px;
-    background-color: #333;
+    background-color: #c8102e;
 }
 .description {
     font-size: 20px;    
@@ -126,6 +126,7 @@ flex-direction: column;
     font-size: 1.2rem; /* Adjust as necessary for the desired size */
 }
 
+
           
 .red-bg { background-color: #c8102e; } /* Red */
 .dark-red-bg { background-color: #a10f25; } /* Dark Red */
@@ -136,4 +137,3 @@ flex-direction: column;
 .offer-card h2 { font-size: 2.5rem; font-weight: bold; }
 .offer-card h3 { font-size: 1.5rem; font-weight: bold; }
 .offer-card p { font-size: 1rem; }
-        
