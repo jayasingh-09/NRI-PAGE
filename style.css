@@ -100,7 +100,21 @@ margin-right: 10px; /* Space between cards */
 height: 90%; /* 70% Image */
 object-fit: cover;
 }
+.custom-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
 
+/* Hide scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    display: none;
+}
+.custom-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 .card-body {
 height: 10%; /* 30% Text */
 display: flex;
