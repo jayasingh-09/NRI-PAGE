@@ -58,6 +58,9 @@
     height: 50px;
     background-color: #c8102e;
 }
+.justify-text { /* important otherwise css will not work */
+    text-align: justify;
+}
 .image-section {
     width: 100%;
     height: auto;
